@@ -30,6 +30,16 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
+  eleventyConfig.addFilter("mapNavigationToBreadcrumbs", navigationArray => {
+    var newNavigationArray = navigationArray.map(function (navItem) {
+      console.log(navItem);
+      navItem['href'] = navItem.url;
+      navItem['text'] = navItem.title;
+      return navItem;
+    });
+    return newNavigationArray;
+  });
+
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;

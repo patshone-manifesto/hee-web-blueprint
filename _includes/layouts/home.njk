@@ -1,6 +1,58 @@
----
-layout: layouts/base.njk
-section: home
----
+{% set pageLayout = "Homepage" %}
 
-{{ layoutContent | safe }}
+{% extends "includes/layout.njk" %}
+
+{% from "node_modules/nhsuk-frontend/packages/components/hero/macro.njk" import hero %}
+{% from "node_modules/nhsuk-frontend/packages/components/promo/macro.njk" import promo %}
+
+{% block breadcrumb %}{% endblock %}
+
+{% block outerBody %}
+
+<main id="maincontent">
+  {%- if sections %}
+  {% for section in sections %}
+    {% switch section.type %}
+    {% case "pageHero" %}
+      {{ hero({
+        "heading": section.heading,
+        "text":  section.text
+      }) }}
+    {% case "promoGroup" %}
+    <section class="nhsuk-section">
+      <div class="nhsuk-width-container">
+          {% for promotions in section.promos | batch(3) %}
+          <div class="nhsuk-grid-row nhsuk-promo-group">
+          {% for promotion in promotions %}
+            <div class="nhsuk-grid-column-one-third nhsuk-promo-group__item">
+              {{ promo({
+              "href": promotion.href,
+              "heading": promotion.heading,
+              "headingLevel": promotion.headingLevel,
+              "description": promotion.description
+              }) }}
+            </div>
+          {% endfor %}
+          </div>
+          {% endfor %}     
+      </div>
+    </section>
+    {% default %}
+  {% endswitch %}  
+  {% endfor %}
+  {% endif %}
+  <section class="nhsuk-section nhsuk-section--white">
+    <div class="nhsuk-width-container">
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+          <h2>Get in touch</h2>
+          <p>This documentation is maintained by the service team at Health Education England. If you've got a question or want to feedback, you can contact us:</p>
+          <ul class="nhsuk-u-margin-bottom-0">
+             <li>by email at <a class="app-contact-panel__link" href="mailto:service-team@hee.nhs.net">service-team@hee.nhs.net</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

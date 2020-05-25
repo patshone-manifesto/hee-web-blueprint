@@ -1,0 +1,134 @@
+{%- from 'node_modules/nhsuk-frontend/packages/components/header/macro.njk' import header %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/footer/macro.njk' import footer %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/skip-link/macro.njk' import skipLink %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/action-link/macro.njk' import actionLink %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/nav-a-z/macro.njk' import azNav %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/breadcrumb/macro.njk' import breadcrumb %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/care-card/macro.njk' import careCard %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/contents-list/macro.njk' import contentsList %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/details/macro.njk' import details %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/header/macro.njk' import header %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/hero/macro.njk' import hero %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/footer/macro.njk' import footer %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/do-dont-list/macro.njk' import list %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/images/macro.njk' import image %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/inset-text/macro.njk' import insetText %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/list-panel/macro.njk' import listPanel %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/pagination/macro.njk' import pagination %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/panel/macro.njk' import panel %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/promo/macro.njk' import promo %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/review-date/macro.njk' import reviewDate %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/skip-link/macro.njk' import skipLink %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/tables/macro.njk' import table %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/warning-callout/macro.njk' import warningCallout %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/back-link/macro.njk' import backLink %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/button/macro.njk' import button %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/checkboxes/macro.njk' import checkboxes %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/date-input/macro.njk' import dateInput %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/error-message/macro.njk' import errorMessage %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/error-summary/macro.njk' import errorSummary %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/fieldset/macro.njk' import fieldset %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/hint/macro.njk' import hint %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/input/macro.njk' import input %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/label/macro.njk' import label %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/radios/macro.njk' import radios %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/select/macro.njk' import select %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/summary-list/macro.njk' import summaryList %}
+{%- from 'node_modules/nhsuk-frontend/packages/components/textarea/macro.njk' import textarea %}
+<!DOCTYPE html>
+  <!--[if lt IE 9]><html class="ie8" lang="en"><![endif]--><!--[if IE 9]><html class="ie9" lang="en"><![endif]--><!--[if gt IE 9]><!--><html lang="en"><!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}" />
+    {%- block extraMeta %}{% endblock %}
+
+    <title>{% if pageTitle %}{{ pageTitle }} - NHS digital service manual{% else %}NHS digital service manual{% endif %}</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://service-manual.nhs.uk/css/main.css">
+
+    <script src="/js/main.min.js" defer></script>
+
+    <!-- Cookie consent -->
+    <script src="/js/cookies.min.js" data-policy-url="/cookie-policy"></script>
+
+    {%- if ENVIRONMENT == "production" %}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script src="https://www.googletagmanager.com/gtag/js?id=UA-9510975-7" data-cookieconsent="statistics" type="text/plain" async></script>
+    <script data-cookieconsent="statistics" type="text/plain" >
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-9510975-7', { 'anonymize_ip': true });
+    </script>
+    {%- endif %}
+
+    <!-- Verify domain with Google -->
+    <meta name="google-site-verification" content="Prj4LS7KX0amTkqVrOlnEyldVIjzJqbnXgPL1zbHocM" />
+
+    <link href="https://www.nhs.uk/" rel="preconnect">
+    <link href="https://assets.nhs.uk/" rel="preconnect" crossorigin>
+    <link href="https://www.googletagmanager.com" rel="preconnect">
+    <link href="https://www.google-analytics.com" rel="preconnect">
+
+    <link rel="shortcut icon" href="/nhsuk-frontend/assets/favicons/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/nhsuk-frontend/assets/favicons/apple-touch-icon-180x180.png">
+    <link rel="mask-icon" href="/nhsuk-frontend/assets/favicons/favicon.svg" color="#005eb8">
+    <link rel="icon" sizes="192x192" href="/nhsuk-frontend/assets/favicons/favicon-192x192.png">
+    <meta name="msapplication-TileImage" content="/nhsuk-frontend/assets/favicons/mediumtile-144x144.png">
+    <meta name="msapplication-TileColor" content="#005eb8">
+    <meta name="msapplication-square70x70logo" content="/nhsuk-frontend/assets/favicons/smalltile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/nhsuk-frontend/assets/favicons/mediumtile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/nhsuk-frontend/assets/favicons/widetile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/nhsuk-frontend/assets/favicons/largetile-310x310.png">
+
+    <meta property="og:url" content="{{ BASE_URL }}"/>
+    <meta property="og:site_name" content="nhs.uk"/>
+    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} - NHS digital service manual{% else %}NHS digital service manual{% endif %}"/>
+    <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the NHS. Things you need to make consistent, usable services that put people first.{% endif %}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:image" content="{% if BASE_URL %}{{ BASE_URL }}{% endif %}{% if pageSection %}/assets/open-graph_{{pageSection | lower | replace(" ", "_") | replace("'", "")}}.png{% else %}/assets/open-graph.png{% endif %}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nhsuk">
+    <meta name="twitter:creator" content="@nhsuk">
+    <meta name="twitter:image:alt" content="nhs.uk">
+
+  </head>
+
+  <body>
+    <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
+
+    {% include "includes/_header-prototype.njk" %}
+
+    {% block breadcrumb %}
+      {{ breadcrumb({
+        href: "/",
+        text: "Home"
+      }) }}
+    {% endblock %}
+
+    {% block outerBody %}{% endblock %}
+
+    {%- if beta %}
+    {% include "includes/_beta-banner.njk" %}
+    {% endif %}
+
+    {% if pageLayout != "Homepage" %}
+    <div class="nhsuk-width-container">
+      <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent">
+        {% block body %}{% endblock %}
+      </main>
+    </div>
+
+    {% endif %}
+
+    {% include "includes/_footer.njk" %}
+
+    {% block pageScripts %}{% endblock %}
+  </body>
+
+</html>

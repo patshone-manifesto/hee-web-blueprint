@@ -1,0 +1,42 @@
+{% extends "includes/layout.njk" %}
+
+{% block body %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds app-component-reading-width">
+
+    <h1 class="app-page-heading">{{pageTitle}}</h1>
+
+
+    {%- if hideDescription %}
+    {% else %}
+      <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
+    {% endif %}
+
+  </div>
+  <div class="nhsuk-grid-column-two-thirds app-component-reading-width">
+
+    {% block bodyContent %}
+    {% endblock %}
+
+  </div>
+
+    {% block aside %}
+    <aside class="nhsuk-grid-column-one-third">
+      {% block asideContent %}
+      {% endblock %}
+    </aside>
+    {% endblock %}
+
+    {%- if dateUpdated %}
+    <div class="nhsuk-grid-column-full">
+      <div class="nhsuk-review-date app-review-date nhsuk-u-margin-top-6">
+        <p class="nhsuk-body-s app-review-date__text">Updated: {{dateUpdated}}</p>
+      </div>
+    </div>
+    {% endif %}
+
+  </div>
+
+
+
+{% endblock %}

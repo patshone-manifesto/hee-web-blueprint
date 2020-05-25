@@ -1,0 +1,37 @@
+{% from 'header/macro.njk' import header %}
+
+{%- if disableSearch %}
+  {{ header({
+    "homeHref": "/",
+    "ariaLabel": "NHS digital service manual homepage",
+    "service": {
+      "name": "Digital service manual",
+      "longName": "true"
+    },
+    "showNav": "true",
+    "showSearch": "false",
+    "searchAction": "/search/",
+    "searchInputName": "search-field",
+    "primaryLinks": [
+
+    ]
+    })
+  }}
+{% else %}
+  {{ header({
+    "homeHref": "/",
+    "ariaLabel": "NHS digital service manual homepage",
+    "service": {
+      "name": "Digital service manual",
+      "longName": "true"
+    },
+    "showNav": "true",
+    "showSearch": "true",
+    "searchAction": "/search/",
+    "searchInputName": "search-field",
+    "primaryLinks": [
+
+    ]
+    })
+  }}
+{% endif %}

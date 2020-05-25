@@ -1,19 +1,30 @@
 ---
 layout: layouts/home.njk
 title: Home
-pageTitle: Home
+pageTitle: National Website Platform
+pageDescription: Tools and guides for the development of the Health Education England Digital Engagement Platform
+sections:
+- type: pageHero
+  heading: National Website Platform
+  text: Tools and guides for the development of the Health Education England National Website Platform.
+- type: promoGroup
+  promos:
+  - href: /blueprint
+    heading: Blueprint
+    headingLevel: 2
+    description: A guide book for software developers and architects working with the Digital engagement platform.
+  - href: /design-system
+    heading: Design system
+    headingLevel: 2
+    description: Tools and principles for designers and user experience practitioners to build consistent, accessible user interfaces.
+  - href: /content-management
+    heading: Content management
+    headingLevel: 2
+    description: Tools and guides for content editors working with the digital engagement platform.
+  - href: /community
+    heading: Community
+    headingLevel: 2
+    description: Tools and principles for designers and user experience practitioners to build consistent, accessible user interfaces.
 date: 2016-01-01T00:00:00.000Z
 permalink: /
-eleventyNavigation:
-  key: Home
-  order: 0
 ---
-# Welcome
-
-This is a template for building a simple blog website with the [Eleventy static site generator](https://www.11ty.io), with deployment to [Netlify](https://www.netlify.com).
-
-Includes [Netlify CMS](https://www.netlifycms.org) for WYSIWYG content editing, and [Netlify Forms](https://www.netlify.com/docs/form-handling) for processing your site's form data.
-
-For more info on installation and usage, view the \[project repo]({{ pkg.repository.url }}) on GitHub.
-
-Or click the button below to deploy your own copy of this project to Netlify
