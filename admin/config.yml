@@ -17,8 +17,9 @@ collections:
     identifier_field: pageTitle
     slug: "{{slug}}"
     fields:
+      - { label: "Title", name: "title", widget: "string" }
       - { label: "Title", name: "pageTitle", widget: "string" }
-      - { label: "Description", name: "pageTitle", widget: "string" }      
+      - { label: "Description", name: "pageDescription", widget: "string" }      
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Permalink", name: "permalink", widget: "string" }
       - label: "Navigation" # https://www.11ty.dev/docs/plugins/navigation/
@@ -27,4 +28,13 @@ collections:
         fields:
           - { label: "Key", name: "key", widget: "string" }
           - { label: "Order", name: "order", widget: "number", default: 0 }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {label: "Sections", name: "sections", widget: "list", types: [
+          { label: "Page hero", name: "pageHero", widget: "object", fields: [{label: "Heading", name: "heading", widget: "string"}, {label: "Text", name: "text", widget: "string"}]},
+          { label: "Promo group", name: "promoGroup", widget: "object", fields: [{label: "Promos", name: "promos", widget: "list", fields: [
+              {label: "Heading", name: "heading", widget: "string"}, 
+              {label: "Heading level", name: "headingLevel", widget: "string"},
+              {label: "Description", name: "description", widget: "string"},
+              {label: "Href", name: "href", widget: "string"}
+            ]}
+        ]}
+      ]}
