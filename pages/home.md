@@ -9,23 +9,19 @@ sections:
   text: Tools and guides for the development of the Health Education England National Website Platform.
 - type: promoGroup
   promos:
-  - type: promo
-    href: /blueprint
+  - href: /blueprint
     heading: Blueprint
     headingLevel: 2
     description: A guide book for software developers and architects working with the Digital engagement platform.
-  - type: promo
-    href: /design-system
+  - href: /design-system
     heading: Design system
     headingLevel: 2
     description: Tools and principles for designers and user experience practitioners to build consistent, accessible user interfaces.
-  - type: promo
-    href: /content-management
+  - href: /content-management
     heading: Content management
     headingLevel: 2
     description: Tools and guides for content editors working with the digital engagement platform.
-  - type: promo
-    href: /community
+  - href: /community
     heading: Community
     headingLevel: 2
     description: Tools and principles for designers and user experience practitioners to build consistent, accessible user interfaces.

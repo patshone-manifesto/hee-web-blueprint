@@ -32,7 +32,7 @@ collections:
           { label: "Page hero", name: "pageHero", widget: "object", fields: [{label: "Heading", name: "heading", widget: "string"}, {label: "Text", name: "text", widget: "string"}]},
           { label: "Promo group", name: "promoGroup", widget: "object", fields: [{label: "Promos", name: "promos", widget: "list", fields: [
               {label: "Heading", name: "heading", widget: "string"}, 
-              {label: "Heading level", name: "headingLevel", widget: "string"},
+              {label: "Heading level", name: "headingLevel", widget: "number"},
               {label: "Description", name: "description", widget: "string"},
               {label: "Href", name: "href", widget: "string"}
             ]}
