@@ -1,8 +1,10 @@
 ---
-layout: layouts/page.njk
 title: Context
 pageTitle: Context
+path: blueprint
+layout: layouts/page.njk
 pageDescription: What is the platform for? What is being built and who is using it.
+date: 2020-05-27T15:00:08.670Z
 permalink: /blueprint/context.html
 eleventyNavigation:
   parent: Blueprint
