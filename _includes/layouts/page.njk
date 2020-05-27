@@ -1,25 +1,12 @@
 {% set landingPage = true %}
 
+
 {% extends "includes/app-layout.njk" %}
 
 
 {% block breadcrumb %}
 
-{% set breadcrumbs = collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key) %}
-{{ breadcrumbs | mapNavigationToBreadcrumbs| dump | safe }}
-
-{#  {% include "blueprint/_breadcrumb.njk" %} #}
-{{ breadcrumb({
-  items: [
-    {
-      href: "/",
-      text: "Home"
-    }
-  ],
-  href: "/blueprint",
-  text: "Blueprint"
-}) }}
-
+ {% include "../includes/_breadcrumb.njk" %}
 
 {% endblock %}
 
@@ -27,6 +14,4 @@
 {{ layoutContent | safe }}
 {% endblock %}
 
-<div class="app-index-navigation app-u-hide-desktop">
- {% include "includes/_side-nav.njk" %}
-</div>
+

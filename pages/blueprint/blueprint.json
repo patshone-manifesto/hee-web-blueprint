@@ -1,3 +1,4 @@
 {
-    "tags": "blueprint"
+    "tags": ["blueprint"],
+    "folder": "/blueprint"
 }

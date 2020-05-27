@@ -5,7 +5,7 @@
   <div class="nhsuk-grid-column-full app-component-reading-width">
 
     <div class="app-pane">
-
+        {{navPages | dump | safe }}
         <div class="app-pane__side-bar">
           {% block sideNav %}
             {% include "./_side-nav.njk" %}

@@ -29,8 +29,10 @@ sections:
     headingLevel: 2
     description: A guide book for software developers and architects working with the Digital engagement platform.
 date: 2016-01-01T00:00:00.000Z
+path: /blueprint
 permalink: /blueprint/index.html
 eleventyNavigation:
+  parent: Home
   key: Blueprint
   order: 0
 ---

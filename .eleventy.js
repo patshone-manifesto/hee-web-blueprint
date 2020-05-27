@@ -40,6 +40,20 @@ module.exports = function(eleventyConfig) {
     return newNavigationArray;
   });
 
+  eleventyConfig.addFilter("folderFilter", function(collection, folder) {
+    return collection.filter(function(item) {
+      console.log(item.template.parsed.name);
+      return item.url.startsWith(folder) && (item.template.parsed.name != 'index');
+    });
+  });
+
+  eleventyConfig.addFilter("mapSideNav", function(collection) {
+    var mappedCollection = collection.map(function (item) {
+      return {"title": item.data.title, "url":item.url};
+    });
+    return mappedCollection;
+  });
+
   // Minify CSS
   eleventyConfig.addFilter("cssmin", function(code) {
     return new CleanCSS({}).minify(code).styles;

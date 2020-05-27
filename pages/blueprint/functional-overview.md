@@ -1,13 +1,14 @@
 ---
 layout: layouts/page.njk
-title: Context
-pageTitle: Context
+title: Functional overview
+pageTitle: Functional overview
 pageDescription: What is the platform for? What is being built and who is using it.
-permalink: /blueprint/context.html
+path: /blueprint
+permalink: /blueprint/functional-overview.html
 eleventyNavigation:
   parent: Blueprint
-  key: Context
-  order: 0
+  key: Functional overview
+  order: 1
 ---
 
 - What is this software project/product/system all about?

@@ -1,7 +1,7 @@
 {% from 'node_modules/nhsuk-frontend/packages/components/header/macro.njk' import header %}
 
 
-{% set navPages = collections.all | eleventyNavigation %}
+{% set navPages = collections.all | eleventyNavigation("Home") %}
 
 {%- if disableSearch %}
 <header class="nhsuk-header" role="banner">
