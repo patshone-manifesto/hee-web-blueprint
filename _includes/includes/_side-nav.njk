@@ -1,9 +1,12 @@
-{% set folderBasedCollection = collections.all | folderFilter(folder) | mapSideNav %}
+{% set siblingsCollection = collections.all | eleventyNavigation(eleventyNavigation.parent) | navGroupBy("subgroup") %}
 
 <nav class="app-side-nav">
+{% for subgroupCollection in siblingsCollection %}
+    <h2 class="app-side-nav__heading">{{subgroupCollection[0].subgroup}}</h2>
     <ul class="nhsuk-list app-side-nav__list">
-    {% for item in folderBasedCollection %}
+    {% for item in subgroupCollection %}
       <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}"><a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a></li>
     {% endfor %}
     </ul>
+{% endfor %}
 </nav>

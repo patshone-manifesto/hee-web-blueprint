@@ -1,15 +1,15 @@
 ---
 layout: layouts/page.njk
-title: Context
-pageTitle: Context
-pageDescription: What is the platform for? What is being built and who is using it.
+title: Quality attributes
+pageTitle: Quality attributes
+pageDescription: WWhat quality attributes or non-functional requirements must the platform satisfy?
 path: /blueprint
-permalink: /blueprint/context.html
+permalink: /blueprint/quality-attributes.html
 eleventyNavigation:
   subgroup: Architecture
   parent: Blueprint
-  key: Context
-  order: 0
+  key: Quality attributes
+  order: 2
 ---
 
 - What is this software project/product/system all about?

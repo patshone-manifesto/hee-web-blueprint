@@ -1,5 +1,4 @@
-{{eleventyNavigation.parent}} | {{eleventyNavigation.key}} 
-{% set breadcrumbs = collections.all | eleventyNavigation("Home") %}
+
 {{ breadcrumbs | dump | safe }}
 {{ breadcrumb({
   items: [

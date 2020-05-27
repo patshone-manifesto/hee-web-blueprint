@@ -6,6 +6,7 @@ pageDescription: What is the platform for? What is being built and who is using 
 path: /blueprint
 permalink: /blueprint/functional-overview.html
 eleventyNavigation:
+  subgroup: Architecture
   parent: Blueprint
   key: Functional overview
   order: 1

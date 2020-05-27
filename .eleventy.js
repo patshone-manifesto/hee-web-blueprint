@@ -30,26 +30,28 @@ module.exports = function(eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
-  eleventyConfig.addFilter("mapNavigationToBreadcrumbs", navigationArray => {
-    var newNavigationArray = navigationArray.map(function (navItem) {
-      console.log(navItem);
-      navItem['href'] = navItem.url;
-      navItem['text'] = navItem.title;
-      return navItem;
-    });
-    return newNavigationArray;
-  });
-
   eleventyConfig.addFilter("folderFilter", function(collection, folder) {
     return collection.filter(function(item) {
-      console.log(item.template.parsed.name);
       return item.url.startsWith(folder) && (item.template.parsed.name != 'index');
     });
+  });
+
+  eleventyConfig.addFilter("navGroupBy", function(collection, fieldToGroupBy) {
+    const map = new Map(Array.from(collection, obj => [obj[fieldToGroupBy], []]));
+    collection.forEach(obj => map.get(obj[fieldToGroupBy]).push(obj));
+    return Array.from(map.values());
   });
 
   eleventyConfig.addFilter("mapSideNav", function(collection) {
     var mappedCollection = collection.map(function (item) {
       return {"title": item.data.title, "url":item.url};
+    });
+    return mappedCollection;
+  });
+
+  eleventyConfig.addFilter("mapBreadCrumbs", function(collection) {
+    var mappedCollection = collection.map(function (item) {
+      return {"text": item.title, "href":item.url};
     });
     return mappedCollection;
   });
