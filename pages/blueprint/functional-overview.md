@@ -1,9 +1,10 @@
 ---
-layout: layouts/page.njk
 title: Functional overview
 pageTitle: Functional overview
-pageDescription: What is the platform for? What is being built and who is using it.
 path: /blueprint
+layout: layouts/page.njk
+pageDescription: What is the platform for? What is being built and who is using it.
+date: 2020-05-27T16:44:10.479Z
 permalink: /blueprint/functional-overview.html
 eleventyNavigation:
   parent: Blueprint
