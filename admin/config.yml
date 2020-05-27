@@ -13,7 +13,7 @@ collections:
   - name: "pages"
     label: "Page"
     folder: "pages"
-    path: "{{path}}"
+    path: "{{path}}/{{slug}}"
     create: true # Change to true to allow editors to create new pages
     identifier_field: pageTitle
     slug: "{{slug}}"
