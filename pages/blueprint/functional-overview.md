@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Functional overview
 pageTitle: Functional overview
-pageDescription: What is the platform for? What is being built and who is using it.
+pageDescription: What does the platform do? What are the significant features, functions and use cases.
 path: /blueprint
 permalink: /blueprint/functional-overview.html
 eleventyNavigation:
@@ -12,7 +12,10 @@ eleventyNavigation:
   order: 1
 ---
 
-- What is this software project/product/system all about?
-- What is it that’s being built?
-- How does it fit into the existing environment? (e.g. systems, business processes, etc) 
-- Who is using it? (users, roles, actors, personas, etc)
+
+- Is it clear what the system actually does?
+- Is it clear which features, functions, use cases, user stories, etc are significant to the architecture and why?
+- Is it clear who the important users are (roles, actors, personas, etc) and how the system caters for their needs?
+- It is clear that the above has been used to shape and define the architecture?
+
+

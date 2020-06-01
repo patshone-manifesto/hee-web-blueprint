@@ -13,7 +13,7 @@ eleventyNavigation:
 
 # 11. Use federated authentication provider
 
-Date: 2020-05-29
+Date: 2020-04-11
 
 ## Status
 
@@ -21,12 +21,14 @@ Pending
 
 ## Context
 
-The issue motivating this decision, and any context that influences or constrains the decision.
+We need to describe an approach to authentication that supports the use of multiple authentication providers. Azure AD provides the ability to configure direct federation with a range of authentication providers and includes the ability to provide managed authorisation for users without the ability to authenticate with Azure AD 
+
+- https://docs.microsoft.com/en-us/azure/active-directory/b2b/delegate-invitations
 
 ## Decision
 
-The change that we're proposing or have agreed to implement.
+We will choose an authentication provider/platform that supports the federation of authentication.
 
 ## Consequences
 
-What becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.
+This means that users, particularly those with OpenAthens user accounts will be able to authenticate with our platform using either their Office 365 credentials, their OpenAthens credentials or other Azure AD native credentials

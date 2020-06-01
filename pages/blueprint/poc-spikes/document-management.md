@@ -48,7 +48,6 @@ The following branch provides source code for the implementation of the PoC
 
 
 
-
 <div class="nhsuk-table__panel-with-heading-tab">
   <h3 class="nhsuk-table__heading-tab">Related architecture decision records</h3>
   <div class="nhsuk-table-responsive">

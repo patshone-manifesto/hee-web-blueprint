@@ -29,30 +29,25 @@ We identified three main candidates to use as our templating language:
 
 #### Freemarker: 
 
-Freemarker is the native templating language used by BloomReach and although there are projects
+Freemarker - https://freemarker.apache.org/ is the native templating language used by BloomReach and although there are projects that provide the ability to parse Freemarker templates with Javascript - this would be a prerequisite to using a tool like StoryBook to manage the frontend components - choosing Freemarker and utlising the prexisting work of the NHSUK Frontend project would require implementing and maintaining Freemarker versions of those components.
 
 
 #### Nunjucks:
 
-We looked at a small PoC that demonstrated nunjucks templates rendering in StoryBook.js, however there is no Java based interpreter for nunjucks so using them with BloomReach would require utilising BloomReach's headless capability and building a custom renderer for it.
+Nunjucks - https://mozilla.github.io/nunjucks/ is the native templating language used by the NHSUK Frontend project. It's syntax is similar to the Jinja templating language which is widely used in Python application development. Choosing Nunjucks would require implementing a custom integration with BloomReach using that platforms SPA/headless functionality. Integrating with StoryBook would require the creation of a custom StoryBook renderer.  
 
 
 #### React:
 
-As part of investigating the use of nunjucks we spent some time looking at BloomReach's headless (SPA) support. The part of the product is quite new although is fully supported and provides out of the box support for React and Angular components.
-
-Following this, we identified some work undertaken by NHS Digital that provides a React based implementation of the NHSUK Frontend project 
+React - https://reactjs.org/ is a fuller javascript framework for building UIs. BloomReach provides an out of the box, if perhaps somewhat nascent integration with React through its SPA/headless functionality. StoryBook provides full support for React and NHS Digital have developed and maintain an implementation of the NHSUK Frontend in React
 
 - https://github.com/NHSDigital/nhsuk-react-components
 
-Interestingly this set of components provides documentation through the use of StoryBook.js as well 
-
-- https://nhsdigital.github.io/nhsuk-react-components/?path=/story/actionlink--actionlink
 
 ## Decision
 
-The change that we're proposing or have agreed to implement.
+We will use React to develop the HEE Frontend platform.
 
 ## Consequences
 
-What becomes easier or more difficult to do and any risks introduced by the change that will need to be mitigated.
+We should look to describe a fallback rendering path for user agents that are unable to render an in browser React application. BloomReach provides support for server side rendering using Next.js - https://nextjs.org/ which mitigates this risk. 
