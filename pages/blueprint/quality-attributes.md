@@ -2,7 +2,7 @@
 layout: layouts/page.njk
 title: Quality attributes
 pageTitle: Quality attributes
-pageDescription: WWhat quality attributes or non-functional requirements must the platform satisfy?
+pageDescription: What quality attributes or non-functional requirements must the platform satisfy?
 path: /blueprint
 permalink: /blueprint/quality-attributes.html
 eleventyNavigation:

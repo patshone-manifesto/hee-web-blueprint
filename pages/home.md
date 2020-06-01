@@ -40,8 +40,4 @@ sections:
         headingLevel: 2
         description: Tools and principles for designers and user experience
           practitioners to build consistent, accessible user interfaces.
-      - heading: Test promo
-        headingLevel: "2"
-        description: This is the test promo
-        href: /test.html
 ---

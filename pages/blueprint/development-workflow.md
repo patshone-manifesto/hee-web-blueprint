@@ -12,9 +12,25 @@ eleventyNavigation:
   order: 12
 ---
 
-- Source control workflow (branching and merging).
-- Code standards.
-- Naming conventions.
-- States and transitions.
-- Ticket management
-- Release and versioning strategy.
+## Development Workflow
+
+Development workflows are implemented using [Github Actions](https://github.com/features/actions). Find below workflows that are implemented so far for CI/CD.
+
+### Continuous Integration (CI) Workflow
+
+When a commit had been made to any branch except `develop`/`release/**` or a PR has been made, then Continuous Integration workflow (`.github/workflows/ci.yml`) would be triggered which would essentially compile & test the project.
+
+### Continuous Deployment (CD) Workflows
+#### Development Environment [`master` should be replaced with `develop` when ready]
+When a commit (essentially merge commits) had been made to `master`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-dev.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `development` environment.
+
+#### Test Environment (disabled temporarily) [TODO: yet to be tested & verified]
+When a commit (essentially merge commits) had been made to `release/**`, then Continuous Deployment workflow (`.github/workflows/ci-and-cd-tst.yml`) would be triggered which would perform both Continuous Integration & Deployment to brCloud `test` environment. This would also deploy the release package onto Github Packages artefact repo.
+
+TODO:
+
+Add notes describing:
+
+- states and transitions
+- source control workflow (Git Flow, etc )
+- ticket management (JIRA) ?
