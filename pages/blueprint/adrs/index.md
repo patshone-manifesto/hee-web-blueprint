@@ -67,6 +67,10 @@ eleventyNavigation:
           <td class="nhsuk-table__cell">ADR-0011</td>
           <td class="nhsuk-table__cell "><a href="ADR-0011-use-federated-authentication-provider.html">Use federated authentication provider</a></td>
         </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell">ADR-0012</td>
+          <td class="nhsuk-table__cell "><a href="ADR-0012-use-external-search-service.html">Use an external search service</a></td>
+        </tr>
       </tbody>
     </table>
   </div>
