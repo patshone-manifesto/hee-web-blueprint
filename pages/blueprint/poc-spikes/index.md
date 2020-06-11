@@ -35,6 +35,10 @@ eleventyNavigation:
           <td class="nhsuk-table__cell" style="white-space:nowrap;"><a href="content-delivery-templating.html">Content delivery templating options</a></td>
           <td class="nhsuk-table__cell">Choosing the templating languages and frameworks to implement the HEE National Website Frontend</td>
         </tr>
+        <tr class="nhsuk-table__row">
+          <td class="nhsuk-table__cell" style="white-space:nowrap;"><a href="channel-blueprinting.html">Channels and blueprinting</a></td>
+          <td class="nhsuk-table__cell">Using Bloomreach's Channel and Blueprinting functionality to provide ability to create subsites</td>
+        </tr>
       </tbody>
     </table>
   </div>
