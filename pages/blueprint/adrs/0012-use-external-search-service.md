@@ -48,6 +48,8 @@ https://www.bloomreach.com/en/products/search-merchandising
 
 This tool provides several additional pieces of functionality including semantic understanding and personalisation. The product however is geared in the first instance to product and merchansing and many of the features are directed towards that usecase.  
 
+NHS digital are undertaking some work to prove out the use of brSM for this scenario. This is one of the first POCs using this search tool outside of a comemerce functionality. 
+
 #### Algolia
 
 Algolia is a decided search-as-a-service product that provides much of the functionality needed out of the box, including synonym support and filters and facets. It is also highly customisable through the UI, allowing for non-developers to configure, adjust and maintain the search offering. 
@@ -67,6 +69,8 @@ Amazon has long provided a well regarded open source search solution called Elas
 We believe that an external search service will be required to provide all of the capabailities that will ultimatly be needed to meet the complex user experience needs. Further to that, using an external search service will better suit the service based architectural model, where the search service will likely need to ultimatly take data from a variety of services such as the LKS document and colberation platform, and in future potentially other services such as Oriel and TIS. 
 
 Using a managed service such as Algolia provides a good balance between powerful and user friendly functionality and implementation complexity - Algolia was chosen as the basis for the POC in part owing to its comprehensive service offering combined with its prebuilt react component library offering fast and efficient implementation. 
+
+Bloomreach Search and Merchandising is an interesting option that provides advantages being tightly integrated into the core CMS project, however using it outside of commerce is somewhat unproven in the market. 
 
 Search as a service options such as Elastic or Azure Cognative search would also be viable candidates (assuming the organisational goal of aligning more functionality to MS's offerings, Azure would likely be recommended ahead of Elasticsearch), and the cost models of these offer likely cost savings, the trade off is more complexity to implement and maintain.  
 
